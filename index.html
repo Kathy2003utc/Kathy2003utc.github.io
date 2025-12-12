@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Katherin Pico | Portafolio</title>
 
-  <!-- Google Fonts -->
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Bootstrap Icons -->
@@ -13,14 +13,15 @@
 
   <style>
     :root{
-      --primary:#2563eb;
-      --secondary:#7c3aed;
-      --dark:#0f172a;
-      --gray:#64748b;
-      --light:#f8fafc;
+      --primary:#0f766e;
+      --secondary:#5eead4;
+      --accent:#fb7185;
+      --bg:#fefce8;
       --card:#ffffff;
-      --shadow:0 20px 40px rgba(2,8,23,.08);
-      --radius:16px;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --shadow:0 20px 40px rgba(0,0,0,.08);
+      --radius:18px;
     }
 
     *{
@@ -30,22 +31,22 @@
 
     body{
       margin:0;
-      background:linear-gradient(135deg,#f0f9ff,#f8fafc);
-      color:var(--dark);
+      background:linear-gradient(135deg,var(--bg),#ecfeff);
+      color:var(--text);
     }
 
     .container{
       max-width:1200px;
       margin:auto;
-      padding:24px;
+      padding:28px;
     }
 
     /* ===== HERO ===== */
     .hero{
-      background:linear-gradient(135deg,var(--primary),var(--secondary));
+      background:linear-gradient(135deg,var(--primary),#134e4a);
       color:white;
-      border-radius:24px;
-      padding:60px 30px;
+      border-radius:28px;
+      padding:70px 30px;
       text-align:center;
       box-shadow:var(--shadow);
       position:relative;
@@ -56,8 +57,9 @@
       content:'';
       position:absolute;
       inset:0;
-      background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cpath d='M0 60 Q30 50 60 60 T120 60' fill='none' stroke='rgba(255,255,255,0.15)' stroke-width='2'/%3E%3C/svg%3E");
-      opacity:.4;
+      background:
+        radial-gradient(circle at 20% 20%,rgba(255,255,255,.15),transparent 40%),
+        radial-gradient(circle at 80% 80%,rgba(255,255,255,.1),transparent 40%);
     }
 
     .hero-content{
@@ -66,13 +68,13 @@
     }
 
     .avatar{
-      width:160px;
-      height:160px;
+      width:170px;
+      height:170px;
       border-radius:50%;
       overflow:hidden;
-      border:5px solid rgba(255,255,255,.35);
-      margin:0 auto 20px;
-      box-shadow:0 15px 30px rgba(0,0,0,.25);
+      border:5px solid var(--secondary);
+      margin:0 auto 24px;
+      box-shadow:0 20px 40px rgba(0,0,0,.3);
       transition:.4s;
     }
 
@@ -82,20 +84,19 @@
       object-fit:cover;
     }
 
-    .avatar:hover{
-      transform:scale(1.05);
-    }
+    .avatar:hover{transform:scale(1.06);}
 
     .hero h1{
-      font-size:2.7rem;
+      font-size:3rem;
       font-weight:800;
       margin:10px 0;
+      letter-spacing:-.5px;
     }
 
     .hero p{
-      font-size:1.2rem;
+      font-size:1.25rem;
       opacity:.95;
-      margin-bottom:25px;
+      margin-bottom:28px;
     }
 
     .hero-buttons{
@@ -106,30 +107,35 @@
     }
 
     .hero-btn{
-      background:rgba(255,255,255,.18);
-      border:1px solid rgba(255,255,255,.25);
-      color:white;
+      background:white;
+      color:var(--primary);
       padding:12px 22px;
       border-radius:50px;
       text-decoration:none;
-      font-weight:600;
+      font-weight:700;
       display:flex;
       align-items:center;
       gap:8px;
       transition:.3s;
     }
 
+    .hero-btn.alt{
+      background:transparent;
+      color:white;
+      border:2px solid white;
+    }
+
     .hero-btn:hover{
-      background:rgba(255,255,255,.3);
-      transform:translateY(-2px);
+      transform:translateY(-3px);
+      box-shadow:0 10px 20px rgba(0,0,0,.2);
     }
 
     /* ===== GRID ===== */
     .grid{
       display:grid;
       grid-template-columns:2fr 1fr;
-      gap:30px;
-      margin-top:40px;
+      gap:32px;
+      margin-top:50px;
     }
 
     @media(max-width:992px){
@@ -140,75 +146,75 @@
     .card{
       background:var(--card);
       border-radius:var(--radius);
-      padding:30px;
+      padding:34px;
       box-shadow:var(--shadow);
-      margin-bottom:24px;
+      margin-bottom:26px;
     }
 
     .card h2{
-      font-size:1.6rem;
-      margin-bottom:18px;
+      font-size:1.7rem;
+      margin-bottom:20px;
       display:flex;
       align-items:center;
       gap:10px;
+      color:var(--primary);
     }
-
-    .card h2 i{color:var(--primary);}
 
     /* ===== ABOUT ===== */
     .about{
-      font-size:1.05rem;
-      color:var(--gray);
-      line-height:1.7;
+      font-size:1.08rem;
+      color:var(--muted);
+      line-height:1.8;
     }
 
     .skills{
       display:flex;
       flex-wrap:wrap;
       gap:10px;
-      margin-top:18px;
+      margin-top:22px;
     }
 
     .skill{
-      background:#eef2ff;
-      color:var(--primary);
+      background:var(--secondary);
+      color:#064e3b;
       padding:8px 16px;
       border-radius:999px;
       font-size:.9rem;
-      font-weight:600;
+      font-weight:700;
     }
 
     /* ===== PROJECTS ===== */
     .projects{
       display:grid;
       grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
-      gap:20px;
-      margin-top:20px;
+      gap:22px;
+      margin-top:24px;
     }
 
     .project{
-      background:white;
-      border-left:4px solid var(--primary);
-      padding:22px;
-      border-radius:14px;
-      box-shadow:0 10px 25px rgba(0,0,0,.06);
+      background:linear-gradient(180deg,#ffffff,#f8fafc);
+      border-radius:16px;
+      padding:24px;
+      box-shadow:0 12px 30px rgba(0,0,0,.08);
       transition:.3s;
       display:flex;
       flex-direction:column;
+      border-top:6px solid var(--primary);
     }
 
     .project:hover{
       transform:translateY(-6px);
-      border-left-color:var(--secondary);
+      border-top-color:var(--accent);
     }
 
     .project h3{
-      font-size:1.15rem;
+      font-size:1.2rem;
       margin-bottom:8px;
+      color:var(--primary);
     }
 
     .project p{
-      color:var(--gray);
+      color:var(--muted);
       font-size:.95rem;
       flex-grow:1;
     }
@@ -217,20 +223,22 @@
       display:flex;
       gap:8px;
       flex-wrap:wrap;
-      margin:12px 0;
+      margin:14px 0;
     }
 
     .tag{
-      background:#e5e7eb;
+      background:#ecfeff;
+      color:#155e75;
       font-size:.8rem;
       padding:4px 10px;
       border-radius:6px;
+      font-weight:600;
     }
 
     .project a{
       text-decoration:none;
-      font-weight:600;
-      color:var(--primary);
+      font-weight:700;
+      color:var(--accent);
       display:flex;
       align-items:center;
       gap:6px;
@@ -241,19 +249,16 @@
       display:flex;
       gap:12px;
       margin-bottom:14px;
-      color:var(--gray);
+      color:var(--muted);
+      font-weight:600;
     }
 
-    .info i{
-      color:var(--primary);
-      font-size:1.1rem;
-      margin-top:2px;
-    }
+    .info i{color:var(--primary);}
 
     footer{
       text-align:center;
-      padding:30px 0;
-      color:var(--gray);
+      padding:40px 0;
+      color:var(--muted);
       font-size:.9rem;
     }
   </style>
@@ -266,18 +271,16 @@
     <section class="hero">
       <div class="hero-content">
         <div class="avatar">
-          <img src="https://avatars.githubusercontent.com/Kathy2003utc?v=4&s=400" alt="Katherin Pico">
+          <img src="https://scontent.fuio1-1.fna.fbcdn.net/v/t39.30808-6/464830324_2028420604263799_8785544366092679001_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFry2AbTGt2gcfs8gPRfRewIr2Qm5azoMcivZCblrOgx360V6yUsmpHtSZon2UfvByJvEOm__BrvqrMz_ORHHJM&_nc_ohc=X3GuVshsGcwQ7kNvwGPlUkj&_nc_oc=Adkh4VmosMrZ91CKwUBVFa59qFCNs3nug--aLGH4o3QwJEK104WW83aY9xbqGyjmVWfsPUyFEhoW3V6YqzzCqBcW&_nc_zt=23&_nc_ht=scontent.fuio1-1.fna&_nc_gid=eDRUhsxF2fgZyhdvEKYJuA&oh=00_AflHRKD7DQeItHgz9ha3ciQn_PduixfyAvJMhjqxPoH1kw&oe=69415D3E" alt="Katherin Pico">
         </div>
+
         <h1>Katherin Pico</h1>
         <p>Estudiante de Sistemas de Información · Desarrollo de Software</p>
         <div class="hero-buttons">
           <a class="hero-btn" href="mailto:kathy.jim16.cc@gmail.com">
             <i class="bi bi-envelope"></i> Email
           </a>
-          <a class="hero-btn" href="tel:+593958615103">
-            <i class="bi bi-telephone"></i> Llamar
-          </a>
-          <a class="hero-btn" href="https://github.com/Kathy2003utc" target="_blank">
+          <a class="hero-btn alt" href="https://github.com/Kathy2003utc" target="_blank">
             <i class="bi bi-github"></i> GitHub
           </a>
         </div>
@@ -293,8 +296,8 @@
           <h2><i class="bi bi-person"></i> Sobre mí</h2>
           <p class="about">
             Estudiante universitaria enfocada en el desarrollo de software, aplicaciones web
-            y bases de datos. Me interesa crear soluciones bien estructuradas, funcionales
-            y con una experiencia de usuario cuidada.
+            y bases de datos. Me gusta crear soluciones limpias, organizadas y visualmente
+            profesionales.
           </p>
 
           <div class="skills">
@@ -314,7 +317,6 @@
           <h2><i class="bi bi-folder2-open"></i> Proyectos Destacados</h2>
 
           <div class="projects">
-
             <div class="project">
               <h3>Inventario de Alimentos</h3>
               <p>Sistema para control y gestión de inventario.</p>
@@ -366,7 +368,6 @@
                 Ver repositorio <i class="bi bi-arrow-right"></i>
               </a>
             </div>
-
           </div>
         </div>
       </main>
@@ -386,7 +387,6 @@
     <footer>
       © 2025 Katherin Pico · GitHub Pages
     </footer>
-
   </div>
 </body>
 </html>
