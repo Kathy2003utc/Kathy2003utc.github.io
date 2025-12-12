@@ -41,7 +41,7 @@
       padding:28px;
     }
 
-    /* ===== HERO ===== */
+    /* HERO */
     .hero{
       background:linear-gradient(135deg,var(--primary),#134e4a);
       color:white;
@@ -49,22 +49,6 @@
       padding:70px 30px;
       text-align:center;
       box-shadow:var(--shadow);
-      position:relative;
-      overflow:hidden;
-    }
-
-    .hero::after{
-      content:'';
-      position:absolute;
-      inset:0;
-      background:
-        radial-gradient(circle at 20% 20%,rgba(255,255,255,.15),transparent 40%),
-        radial-gradient(circle at 80% 80%,rgba(255,255,255,.1),transparent 40%);
-    }
-
-    .hero-content{
-      position:relative;
-      z-index:2;
     }
 
     .avatar{
@@ -75,7 +59,6 @@
       border:5px solid var(--secondary);
       margin:0 auto 24px;
       box-shadow:0 20px 40px rgba(0,0,0,.3);
-      transition:.4s;
     }
 
     .avatar img{
@@ -84,25 +67,22 @@
       object-fit:cover;
     }
 
-    .avatar:hover{transform:scale(1.06);}
-
     .hero h1{
       font-size:3rem;
       font-weight:800;
       margin:10px 0;
-      letter-spacing:-.5px;
     }
 
     .hero p{
       font-size:1.25rem;
       opacity:.95;
-      margin-bottom:28px;
     }
 
     .hero-buttons{
       display:flex;
       gap:14px;
       justify-content:center;
+      margin-top:20px;
       flex-wrap:wrap;
     }
 
@@ -116,7 +96,6 @@
       display:flex;
       align-items:center;
       gap:8px;
-      transition:.3s;
     }
 
     .hero-btn.alt{
@@ -125,12 +104,7 @@
       border:2px solid white;
     }
 
-    .hero-btn:hover{
-      transform:translateY(-3px);
-      box-shadow:0 10px 20px rgba(0,0,0,.2);
-    }
-
-    /* ===== GRID ===== */
+    /* GRID */
     .grid{
       display:grid;
       grid-template-columns:2fr 1fr;
@@ -142,7 +116,7 @@
       .grid{grid-template-columns:1fr;}
     }
 
-    /* ===== CARD ===== */
+    /* CARD */
     .card{
       background:var(--card);
       border-radius:var(--radius);
@@ -160,7 +134,7 @@
       color:var(--primary);
     }
 
-    /* ===== ABOUT ===== */
+    /* ABOUT */
     .about{
       font-size:1.08rem;
       color:var(--muted);
@@ -181,9 +155,12 @@
       border-radius:999px;
       font-size:.9rem;
       font-weight:700;
+      display:flex;
+      align-items:center;
+      gap:6px;
     }
 
-    /* ===== PROJECTS ===== */
+    /* PROJECTS */
     .projects{
       display:grid;
       grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
@@ -192,30 +169,22 @@
     }
 
     .project{
-      background:linear-gradient(180deg,#ffffff,#f8fafc);
+      background:#ffffff;
       border-radius:16px;
       padding:24px;
       box-shadow:0 12px 30px rgba(0,0,0,.08);
-      transition:.3s;
+      border-top:6px solid var(--primary);
       display:flex;
       flex-direction:column;
-      border-top:6px solid var(--primary);
-    }
-
-    .project:hover{
-      transform:translateY(-6px);
-      border-top-color:var(--accent);
     }
 
     .project h3{
-      font-size:1.2rem;
-      margin-bottom:8px;
       color:var(--primary);
+      font-size:1.2rem;
     }
 
     .project p{
       color:var(--muted);
-      font-size:.95rem;
       flex-grow:1;
     }
 
@@ -244,149 +213,94 @@
       gap:6px;
     }
 
-    /* ===== SIDEBAR ===== */
-    .info{
-      display:flex;
-      gap:12px;
-      margin-bottom:14px;
-      color:var(--muted);
-      font-weight:600;
+    /* INFO */
+    .info-title{
+      font-weight:700;
+      color:var(--primary);
+      margin-top:10px;
     }
 
-    .info i{color:var(--primary);}
+    .info{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      color:var(--muted);
+      margin-bottom:10px;
+    }
 
     footer{
       text-align:center;
       padding:40px 0;
       color:var(--muted);
-      font-size:.9rem;
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
+<div class="container">
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-content">
-        <div class="avatar">
-          <img src="https://scontent.fuio1-1.fna.fbcdn.net/v/t39.30808-6/464830324_2028420604263799_8785544366092679001_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFry2AbTGt2gcfs8gPRfRewIr2Qm5azoMcivZCblrOgx360V6yUsmpHtSZon2UfvByJvEOm__BrvqrMz_ORHHJM&_nc_ohc=X3GuVshsGcwQ7kNvwGPlUkj&_nc_oc=Adkh4VmosMrZ91CKwUBVFa59qFCNs3nug--aLGH4o3QwJEK104WW83aY9xbqGyjmVWfsPUyFEhoW3V6YqzzCqBcW&_nc_zt=23&_nc_ht=scontent.fuio1-1.fna&_nc_gid=eDRUhsxF2fgZyhdvEKYJuA&oh=00_AflHRKD7DQeItHgz9ha3ciQn_PduixfyAvJMhjqxPoH1kw&oe=69415D3E" alt="Katherin Pico">
-        </div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="avatar">
+      <img src="https://scontent.fuio1-1.fna.fbcdn.net/v/t39.30808-6/464830324_2028420604263799_8785544366092679001_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFry2AbTGt2gcfs8gPRfRewIr2Qm5azoMcivZCblrOgx360V6yUsmpHtSZon2UfvByJvEOm__BrvqrMz_ORHHJM&_nc_ohc=X3GuVshsGcwQ7kNvwGPlUkj&_nc_oc=Adkh4VmosMrZ91CKwUBVFa59qFCNs3nug--aLGH4o3QwJEK104WW83aY9xbqGyjmVWfsPUyFEhoW3V6YqzzCqBcW&_nc_zt=23&_nc_ht=scontent.fuio1-1.fna&_nc_gid=eDRUhsxF2fgZyhdvEKYJuA&oh=00_AflHRKD7DQeItHgz9ha3ciQn_PduixfyAvJMhjqxPoH1kw&oe=69415D3E" alt="Katherin Pico">
+    </div>
+    <h1>Katherin Pico</h1>
+    <p>Estudiante de Sistemas de Información · Desarrollo de Software</p>
 
-        <h1>Katherin Pico</h1>
-        <p>Estudiante de Sistemas de Información · Desarrollo de Software</p>
-        <div class="hero-buttons">
-          <a class="hero-btn" href="mailto:kathy.jim16.cc@gmail.com">
-            <i class="bi bi-envelope"></i> Email
-          </a>
-          <a class="hero-btn alt" href="https://github.com/Kathy2003utc" target="_blank">
-            <i class="bi bi-github"></i> GitHub
-          </a>
+    <div class="hero-buttons">
+      <a class="hero-btn" href="mailto:kathy.jim06.cc@gmail.com"><i class="bi bi-envelope"></i>Email</a>
+      <a class="hero-btn alt" href="https://github.com/Kathy2003utc" target="_blank"><i class="bi bi-github"></i>GitHub</a>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <div class="grid">
+
+    <!-- MAIN -->
+    <main>
+      <div class="card">
+        <h2><i class="bi bi-person"></i> Sobre mí</h2>
+        <p class="about">
+          Estudiante universitaria enfocada en el desarrollo de software, aplicaciones web
+          y bases de datos. Me gusta crear soluciones limpias, organizadas y visualmente profesionales.
+        </p>
+
+        <div class="skills">
+          <span class="skill"><i class="bi bi-filetype-py"></i>Python</span>
+          <span class="skill"><i class="bi bi-diagram-3"></i>Django</span>
+          <span class="skill"><i class="bi bi-filetype-php"></i>PHP</span>
+          <span class="skill"><i class="bi bi-layers"></i>Laravel</span>
+          <span class="skill"><i class="bi bi-database"></i>MySQL</span>
+          <span class="skill"><i class="bi bi-filetype-html"></i>HTML</span>
+          <span class="skill"><i class="bi bi-filetype-css"></i>CSS</span>
+          <span class="skill"><i class="bi bi-filetype-js"></i>JavaScript</span>
+          <span class="skill"><i class="bi bi-git"></i>Git</span>
         </div>
       </div>
-    </section>
+    </main>
 
-    <!-- CONTENT -->
-    <div class="grid">
+    <!-- SIDEBAR -->
+    <aside>
+      <div class="card">
+        <h2><i class="bi bi-info-circle"></i> Información personal</h2>
 
-      <!-- MAIN -->
-      <main>
-        <div class="card">
-          <h2><i class="bi bi-person"></i> Sobre mí</h2>
-          <p class="about">
-            Estudiante universitaria enfocada en el desarrollo de software, aplicaciones web
-            y bases de datos. Me gusta crear soluciones limpias, organizadas y visualmente
-            profesionales.
-          </p>
+        <div class="info-title">Correo:</div>
+        <div class="info"><i class="bi bi-envelope"></i> kathy.jim06.cc@gmail.com</div>
 
-          <div class="skills">
-            <span class="skill">Python</span>
-            <span class="skill">Django</span>
-            <span class="skill">PHP</span>
-            <span class="skill">Laravel</span>
-            <span class="skill">MySQL</span>
-            <span class="skill">HTML</span>
-            <span class="skill">CSS</span>
-            <span class="skill">JavaScript</span>
-            <span class="skill">Git</span>
-          </div>
-        </div>
+        <div class="info-title">Teléfono:</div>
+        <div class="info"><i class="bi bi-telephone"></i> +593 95 861 5103</div>
 
-        <div class="card">
-          <h2><i class="bi bi-folder2-open"></i> Proyectos Destacados</h2>
+        <div class="info-title">Ubicación:</div>
+        <div class="info"><i class="bi bi-geo-alt"></i> Tena – Ecuador</div>
+      </div>
+    </aside>
 
-          <div class="projects">
-            <div class="project">
-              <h3>Inventario de Alimentos</h3>
-              <p>Sistema para control y gestión de inventario.</p>
-              <div class="tech">
-                <span class="tag">Python</span>
-                <span class="tag">Django</span>
-                <span class="tag">MySQL</span>
-              </div>
-              <a href="https://github.com/Kathy2003utc/Inventario_alimentos" target="_blank">
-                Ver repositorio <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-
-            <div class="project">
-              <h3>Contratos de Artistas</h3>
-              <p>Gestión de contratos artísticos.</p>
-              <div class="tech">
-                <span class="tag">Django</span>
-                <span class="tag">Python</span>
-                <span class="tag">MySQL</span>
-              </div>
-              <a href="https://github.com/Kathy2003utc/Contratos_Artistas" target="_blank">
-                Ver repositorio <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-
-            <div class="project">
-              <h3>SIG Turismo</h3>
-              <p>Sistema de información geográfica.</p>
-              <div class="tech">
-                <span class="tag">Laravel</span>
-                <span class="tag">PHP</span>
-                <span class="tag">MySQL</span>
-              </div>
-              <a href="https://github.com/Kathy2003utc/SIG_turismo" target="_blank">
-                Ver repositorio <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-
-            <div class="project">
-              <h3>Plataformas y Videojuegos</h3>
-              <p>Proyectos académicos de desarrollo.</p>
-              <div class="tech">
-                <span class="tag">Python</span>
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-              </div>
-              <a href="https://github.com/Kathy2003utc/Plataformas-y-videojuegos" target="_blank">
-                Ver repositorio <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </main>
-
-      <!-- SIDEBAR -->
-      <aside>
-        <div class="card">
-          <h2><i class="bi bi-info-circle"></i> Información</h2>
-          <div class="info"><i class="bi bi-envelope"></i> kathy.jim16.cc@gmail.com</div>
-          <div class="info"><i class="bi bi-telephone"></i> +593 95 861 5103</div>
-          <div class="info"><i class="bi bi-geo-alt"></i> Ecuador – Tena</div>
-        </div>
-      </aside>
-
-    </div>
-
-    <footer>
-      © 2025 Katherin Pico · GitHub Pages
-    </footer>
   </div>
+
+  <footer>
+    © 2025 Katherin Pico · GitHub Pages
+  </footer>
+
+</div>
 </body>
 </html>
