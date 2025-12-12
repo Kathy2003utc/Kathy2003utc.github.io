@@ -223,6 +223,49 @@
       gap:6px;
     }
 
+    /* INFO PERSONAL MEJORADO */
+    .info-list{
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+
+    .info-item{
+      display:flex;
+      align-items:flex-start;
+      gap:14px;
+    }
+
+    .info-icon{
+      width:44px;
+      height:44px;
+      background:var(--secondary);
+      color:#064e3b;
+      border-radius:12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:1.2rem;
+      flex-shrink:0;
+    }
+
+    .info-text{
+      display:flex;
+      flex-direction:column;
+    }
+
+    .info-label{
+      font-size:.85rem;
+      font-weight:700;
+      color:var(--primary);
+    }
+
+    .info-value{
+      font-size:.95rem;
+      color:var(--muted);
+      margin-top:2px;
+    }
+
     footer{
       text-align:center;
       padding:40px 0;
@@ -237,14 +280,16 @@
   <!-- HERO -->
   <section class="hero">
     <div class="avatar">
-      <img src="https://scontent.fuio1-1.fna.fbcdn.net/v/t39.30808-6/464830324_2028420604263799_8785544366092679001_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFry2AbTGt2gcfs8gPRfRewIr2Qm5azoMcivZCblrOgx360V6yUsmpHtSZon2UfvByJvEOm__BrvqrMz_ORHHJM&_nc_ohc=X3GuVshsGcwQ7kNvwGPlUkj&_nc_oc=Adkh4VmosMrZ91CKwUBVFa59qFCNs3nug--aLGH4o3QwJEK104WW83aY9xbqGyjmVWfsPUyFEhoW3V6YqzzCqBcW&_nc_zt=23&_nc_ht=scontent.fuio1-1.fna&_nc_gid=eDRUhsxF2fgZyhdvEKYJuA&oh=00_AflHRKD7DQeItHgz9ha3ciQn_PduixfyAvJMhjqxPoH1kw&oe=69415D3E" alt="Katherin Pico">
+      <img src="https://scontent.fuio1-1.fna.fbcdn.net/v/t39.30808-6/464830324_2028420604263799_8785544366092679001_n.jpg" alt="Katherin Pico">
     </div>
 
     <h1>Katherin Pico</h1>
     <p>Estudiante de Sistemas de Información · Desarrollo de Software</p>
 
     <div class="hero-buttons">
-      <a class="hero-btn alt" href="https://github.com/Kathy2003utc" target="_blank"><i class="bi bi-github"></i>GitHub</a>
+      <a class="hero-btn alt" href="https://github.com/Kathy2003utc" target="_blank">
+        <i class="bi bi-github"></i> GitHub
+      </a>
     </div>
   </section>
 
@@ -270,11 +315,35 @@
       </div>
     </div>
 
+    <!-- INFO PERSONAL -->
     <div class="card">
       <h2><i class="bi bi-info-circle"></i> Información personal</h2>
-      <p><strong>Correo:</strong> kathy.jim06.cc@gmail.com</p>
-      <p><strong>Teléfono:</strong> +593 95 861 5103</p>
-      <p><strong>Ubicación:</strong> Tena – Ecuador</p>
+
+      <div class="info-list">
+        <div class="info-item">
+          <div class="info-icon"><i class="bi bi-envelope"></i></div>
+          <div class="info-text">
+            <span class="info-label">Correo</span>
+            <span class="info-value">kathy.jim06.cc@gmail.com</span>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon"><i class="bi bi-telephone"></i></div>
+          <div class="info-text">
+            <span class="info-label">Teléfono</span>
+            <span class="info-value">+593 95 861 5103</span>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon"><i class="bi bi-geo-alt"></i></div>
+          <div class="info-text">
+            <span class="info-label">Ubicación</span>
+            <span class="info-value">Tena – Ecuador</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -287,7 +356,9 @@
         <h3>Inventario de Alimentos</h3>
         <p>Sistema para control y gestión de inventario.</p>
         <div class="tech">
-          <span class="tag">Python</span><span class="tag">Django</span><span class="tag">MySQL</span>
+          <span class="tag">Python</span>
+          <span class="tag">Django</span>
+          <span class="tag">MySQL</span>
         </div>
         <a href="https://github.com/Kathy2003utc/Inventario_alimentos" target="_blank">
           Ver repositorio <i class="bi bi-arrow-right"></i>
@@ -298,7 +369,9 @@
         <h3>Contratos de Artistas</h3>
         <p>Gestión de contratos artísticos.</p>
         <div class="tech">
-          <span class="tag">Django</span><span class="tag">Python</span><span class="tag">MySQL</span>
+          <span class="tag">Django</span>
+          <span class="tag">Python</span>
+          <span class="tag">MySQL</span>
         </div>
         <a href="https://github.com/Kathy2003utc/Contratos_Artistas" target="_blank">
           Ver repositorio <i class="bi bi-arrow-right"></i>
@@ -309,7 +382,9 @@
         <h3>SIG Turismo</h3>
         <p>Sistema de información geográfica.</p>
         <div class="tech">
-          <span class="tag">Laravel</span><span class="tag">PHP</span><span class="tag">MySQL</span>
+          <span class="tag">Laravel</span>
+          <span class="tag">PHP</span>
+          <span class="tag">MySQL</span>
         </div>
         <a href="https://github.com/Kathy2003utc/SIG_turismo" target="_blank">
           Ver repositorio <i class="bi bi-arrow-right"></i>
@@ -320,7 +395,9 @@
         <h3>Plataformas y Videojuegos</h3>
         <p>Proyectos académicos de desarrollo.</p>
         <div class="tech">
-          <span class="tag">Python</span><span class="tag">HTML</span><span class="tag">CSS</span>
+          <span class="tag">Python</span>
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
         </div>
         <a href="https://github.com/Kathy2003utc/Plataformas-y-videojuegos" target="_blank">
           Ver repositorio <i class="bi bi-arrow-right"></i>
