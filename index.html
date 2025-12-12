@@ -12,9 +12,17 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
   <style>
+    :root {
+      --primary: #2563eb;
+      --primary-soft: #e0e7ff;
+      --bg: #f9fafb;
+      --text: #1f2937;
+      --muted: #475569;
+    }
+
     body {
-      background: #f8f9fb;
-      color: #1f2933;
+      background: var(--bg);
+      color: var(--text);
       font-family: system-ui, -apple-system, BlinkMacSystemFont;
     }
 
@@ -22,97 +30,111 @@
     header {
       background: white;
       border-bottom: 1px solid #e5e7eb;
-      padding: 50px 0;
+      padding: 60px 0;
     }
 
     .name {
-      font-size: 2.4rem;
-      font-weight: 700;
+      font-size: 2.8rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
     }
 
     .role {
-      font-size: 1.1rem;
-      color: #6b7280;
+      font-size: 1.15rem;
+      color: var(--muted);
     }
 
     /* BOX */
     .box {
       background: white;
-      border-radius: 16px;
-      padding: 30px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+      border-radius: 18px;
+      padding: 32px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.05);
     }
 
-    /* SIDEBAR */
+    /* AVATAR */
     .avatar {
-      width: 130px;
-      height: 130px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
-      border: 4px solid #e5e7eb;
+      border: 5px solid var(--primary-soft);
       object-fit: cover;
     }
 
+    /* KNOWLEDGE */
     .section-label {
       font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      color: #6b7280;
+      letter-spacing: 0.12em;
+      color: var(--muted);
       font-weight: 700;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .info {
       font-size: 0.95rem;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
+    /* SKILLS */
     .skill {
       display: inline-block;
-      background: #eef2ff;
-      color: #1d4ed8;
-      padding: 6px 12px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      padding: 7px 14px;
       border-radius: 999px;
       font-size: 0.8rem;
-      margin: 4px;
+      margin: 5px;
+      font-weight: 500;
     }
 
     /* PROJECTS */
     .project {
-      background: #f9fafb;
-      border-left: 4px solid #2563eb;
-      border-radius: 12px;
-      padding: 22px;
-      margin-bottom: 22px;
+      background: white;
+      border-radius: 16px;
+      padding: 26px;
+      margin-bottom: 24px;
+      border: 1px solid #e5e7eb;
+      transition: all 0.3s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(37,99,235,0.15);
+      border-color: var(--primary);
     }
 
     .project h6 {
-      font-weight: 600;
-      font-size: 1.05rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--primary);
       margin-bottom: 6px;
     }
 
     .project p {
       font-size: 0.95rem;
-      color: #4b5563;
+      color: var(--muted);
     }
 
     .tech {
       font-size: 0.75rem;
-      background: #e5e7eb;
-      padding: 4px 8px;
-      border-radius: 6px;
+      background: #f1f5f9;
+      padding: 6px 10px;
+      border-radius: 8px;
       margin-right: 6px;
+      display: inline-block;
     }
 
     .project a {
-      font-size: 0.9rem;
+      display: inline-block;
+      margin-top: 10px;
       font-weight: 600;
-      color: #2563eb;
+      color: var(--primary);
       text-decoration: none;
     }
 
     footer {
       text-align: center;
-      color: #6b7280;
+      color: var(--muted);
       font-size: 0.85rem;
       padding: 40px 0;
     }
@@ -142,7 +164,9 @@
     <!-- SIDEBAR -->
     <aside class="col-lg-4">
       <div class="box text-center">
-        <img src="https://avatars.githubusercontent.com/Kathy2003utc" alt="Foto de perfil" class="avatar mb-3">
+        <img src="https://avatars.githubusercontent.com/Kathy2003utc?v=4&s=300"
+             alt="Foto de perfil"
+             class="avatar mb-3">
 
         <div class="section-label">PERFIL</div>
         <p class="text-start">
@@ -190,7 +214,7 @@
 
         <div class="project">
           <h6>Inventario de Alimentos</h6>
-          <p>Sistema para control y gestión de inventario.</p>
+          <p>Sistema para el control y gestión de inventario.</p>
           <span class="tech">Python</span>
           <span class="tech">Django</span>
           <span class="tech">MySQL</span><br>
@@ -201,7 +225,7 @@
 
         <div class="project">
           <h6>Contratos de Artistas</h6>
-          <p>Plataforma para gestión de contratos artísticos.</p>
+          <p>Plataforma para la gestión de contratos artísticos.</p>
           <span class="tech">Django</span>
           <span class="tech">Python</span>
           <span class="tech">MySQL</span><br>
