@@ -9,21 +9,27 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
+    :root {
+      --primary: #0d6efd;
+      --dark: #212529;
+      --light: #f8f9fa;
+    }
+
     body {
-      scroll-behavior: smooth;
-      background: #f8f9fa;
+      background: var(--light);
+      color: var(--dark);
     }
 
     /* HERO */
     .hero {
-      background: linear-gradient(135deg, #4e342e, #6d4c41);
+      background: linear-gradient(135deg, #0d6efd, #084298);
       color: white;
       padding: 120px 20px;
       text-align: center;
     }
     .hero h1 {
       font-size: 3rem;
-      font-weight: bold;
+      font-weight: 700;
     }
 
     /* SECTIONS */
@@ -34,45 +40,57 @@
       text-align: center;
       margin-bottom: 40px;
     }
+    .section-title h2 {
+      font-weight: 700;
+    }
 
     /* SKILLS */
     .skill-badge {
-      background: #e9ecef;
-      color: #000;
-      padding: 10px 18px;
+      background: white;
+      border: 1px solid var(--primary);
+      color: var(--primary);
+      padding: 8px 16px;
       border-radius: 20px;
       font-weight: 500;
       margin: 6px;
       display: inline-block;
     }
 
-    /* PROJECT CARDS */
+    /* PROJECTS */
     .project-card {
       background: white;
       border-radius: 12px;
       padding: 25px;
-      border-left: 6px solid #0d6efd;
-      transition: transform 0.3s;
+      border-left: 6px solid var(--primary);
       height: 100%;
+      transition: transform 0.3s;
     }
     .project-card:hover {
-      transform: translateY(-8px);
+      transform: translateY(-6px);
     }
+
     .tech-badge {
-      background: #f1f3f5;
+      background: var(--light);
       border-radius: 8px;
       padding: 5px 10px;
       font-size: 0.85rem;
       margin-right: 6px;
+      display: inline-block;
     }
+
     .repo-link {
-      color: #0d6efd;
-      font-weight: 500;
+      color: var(--primary);
+      font-weight: 600;
       text-decoration: none;
     }
 
+    /* CONTACT */
+    .contact-item {
+      margin-bottom: 10px;
+    }
+
     footer {
-      background: #4e342e;
+      background: var(--dark);
       color: white;
       text-align: center;
       padding: 20px;
@@ -84,9 +102,9 @@
 
 <!-- HERO -->
 <section class="hero">
-  <h1>Hola, soy Katherin Pico</h1>
+  <h1>Katherin Pico</h1>
   <p class="fs-5 mt-3">
-    Estudiante de Tecnología | Desarrollo de Software
+    Estudiante de Sistemas de Información | Desarrollo de Software
   </p>
 </section>
 
@@ -95,12 +113,11 @@
   <div class="container">
     <div class="section-title">
       <h2>Sobre mí</h2>
-      <p class="text-muted">Un poco sobre quién soy</p>
     </div>
     <p class="text-center">
-      Soy estudiante universitaria interesada en el desarrollo de software,
-      aplicaciones web y bases de datos. Me gusta crear sistemas funcionales,
-      ordenados y con buen diseño.
+      Soy estudiante universitaria de Sistemas de Información, interesada en el
+      desarrollo de software, aplicaciones web y bases de datos. Me enfoco en
+      crear sistemas funcionales, organizados y con una buena experiencia de usuario.
     </p>
   </div>
 </section>
@@ -120,103 +137,79 @@
       <span class="skill-badge">MySQL</span>
       <span class="skill-badge">Bootstrap</span>
       <span class="skill-badge">Django</span>
+      <span class="skill-badge">Laravel</span>
       <span class="skill-badge">Git</span>
     </div>
   </div>
 </section>
 
-<!-- PROYECTOS DESTACADOS -->
-<!-- PROYECTOS DESTACADOS -->
+<!-- PROYECTOS -->
 <section class="section">
   <div class="container">
     <div class="section-title">
       <h2>Proyectos Destacados</h2>
       <p class="text-muted">
-        Selección de proyectos académicos desarrollados con diferentes tecnologías
+        Proyectos académicos desarrollados con diferentes tecnologías
       </p>
     </div>
 
     <div class="row g-4">
 
-      <!-- INVENTARIO DE ALIMENTOS -->
       <div class="col-md-6">
         <div class="project-card">
           <h5>Inventario de Alimentos</h5>
-          <p>
-            Sistema para el control y gestión de inventario de alimentos.
-          </p>
+          <p>Sistema para el control y gestión de inventario de alimentos.</p>
           <div class="mb-3">
             <span class="tech-badge">Python</span>
             <span class="tech-badge">Django</span>
-            <span class="tech-badge">HTML</span>
-            <span class="tech-badge">CSS</span>
+            <span class="tech-badge">MySQL</span>
           </div>
-          <a href="https://github.com/Kathy2003utc/Inventario_alimentos" 
-             target="_blank" 
-             class="repo-link">
+          <a href="https://github.com/Kathy2003utc/Inventario_alimentos" target="_blank" class="repo-link">
             Ver repositorio →
           </a>
         </div>
       </div>
 
-      <!-- CONTRATOS ARTISTAS -->
       <div class="col-md-6">
         <div class="project-card">
           <h5>Contratos de Artistas</h5>
-          <p>
-            Plataforma para la gestión de contratos artísticos.
-          </p>
+          <p>Plataforma para la gestión de contratos artísticos.</p>
           <div class="mb-3">
             <span class="tech-badge">Django</span>
-            <span class="tech-badge">HTML</span>
             <span class="tech-badge">Python</span>
             <span class="tech-badge">MySQL</span>
           </div>
-          <a href="https://github.com/Kathy2003utc/Contratos_Artistas"
-             target="_blank"
-             class="repo-link">
+          <a href="https://github.com/Kathy2003utc/Contratos_Artistas" target="_blank" class="repo-link">
             Ver repositorio →
           </a>
         </div>
       </div>
 
-      <!-- SIG TURISMO -->
       <div class="col-md-6">
         <div class="project-card">
           <h5>SIG Turismo</h5>
-          <p>
-            Sistema de Información Geográfica para gestión de lugares turísticos.
-          </p>
+          <p>Sistema de Información Geográfica para lugares turísticos.</p>
           <div class="mb-3">
             <span class="tech-badge">Laravel</span>
-            <span class="tech-badge">HTML</span>
             <span class="tech-badge">PHP</span>
             <span class="tech-badge">MySQL</span>
           </div>
-          <a href="https://github.com/Kathy2003utc/SIG_turismo"
-             target="_blank"
-             class="repo-link">
+          <a href="https://github.com/Kathy2003utc/SIG_turismo" target="_blank" class="repo-link">
             Ver repositorio →
           </a>
         </div>
       </div>
 
-      <!-- PLATAFORMAS Y VIDEOJUEGOS -->
       <div class="col-md-6">
         <div class="project-card">
           <h5>Plataformas y Videojuegos</h5>
-          <p>
-            Desarrollo de aplicaciones y videojuegos con enfoque académico.
-          </p>
+          <p>Desarrollo de aplicaciones y videojuegos con enfoque académico.</p>
           <div class="mb-3">
-            <span class="tech-badge">Django</span>
             <span class="tech-badge">Python</span>
             <span class="tech-badge">HTML</span>
             <span class="tech-badge">CSS</span>
           </div>
-          <a href="https://github.com/Kathy2003utc/Plataformas-y-videojuegos"
-             target="_blank"
-             class="repo-link">
+          <a href="https://github.com/Kathy2003utc/Plataformas-y-videojuegos" target="_blank" class="repo-link">
             Ver repositorio →
           </a>
         </div>
@@ -226,13 +219,16 @@
   </div>
 </section>
 
-
 <!-- CONTACTO -->
 <section class="section bg-light">
   <div class="container text-center">
-    <h2>Contacto</h2>
-    <p><strong>Email:</strong> katherin.pico@email.com</p>
-    <p><strong>GitHub:</strong> github.com/Kathy2003utc</p>
+    <div class="section-title">
+      <h2>Información Personal</h2>
+    </div>
+    <p class="contact-item"><strong>Email:</strong> kathy.jim16.cc@gmail.com</p>
+    <p class="contact-item"><strong>Teléfono:</strong> +593 95 861 5103</p>
+    <p class="contact-item"><strong>Ubicación:</strong> Ecuador – Tena</p>
+    <p class="contact-item"><strong>GitHub:</strong> github.com/Kathy2003utc</p>
   </div>
 </section>
 
